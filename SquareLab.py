@@ -1,10 +1,13 @@
 from Myro import *
+init("sim")
 
-
-def drawShape():
-    sides = input("How many sides to this polygon? : ")
-    size = input("How big? : ")
-    init("sim")
+def drawShape(sides,size):
+    #sides = input("How many sides to this polygon? : ")
+    #size = input("How big? : ")
+    """Didn't use the input because the prompt
+       kept popping up behind the sim window
+       and numbers wouldnt be able to be entered
+       So the script would have to be stopped"""
     penDown()
     i = 0
     while i < sides:
@@ -14,7 +17,7 @@ def drawShape():
     penUp()
 
 def drawSquare():
-    drawShape()
+    drawShape(4,1)
     
 def drawSquareAtAngle(angle):
     turnBy(angle)
@@ -22,4 +25,6 @@ def drawSquareAtAngle(angle):
  
   
              
-drawShape()
+drawSquare()
+forward(1,2)
+drawShape(8,1)
