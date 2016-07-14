@@ -1,6 +1,5 @@
 #Robot Dance
 #Boubacar and Joshua
-#Comments by josh
 from Myro import *
 init("COM4")
 
@@ -15,7 +14,7 @@ def RobotDance():
         frontWiggle(2)
         motors(0.5,3,1)
         i+=1
-        
+    firstVerse()       
       
 #Makes robo go  forward and backward
 def frontBack(speed,times):
