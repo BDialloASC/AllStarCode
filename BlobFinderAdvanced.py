@@ -105,13 +105,11 @@ def findBlob(color):
        pic = takePicture()                 #saves pic in variable
        spot = findColorSpot(pic, color)    #saves value returned by findColorSpot
     x=15                     #x = angle amount turned
-    while(spot!=0):          #Searches for blob while in range
-        if(spot==-1):        #If blob is found right away
-            forward(1,0.5)
-            speak("Found")
-            wait(1)
-            backward(1,3)
-            break            #The end: breaks out of loop
+    while(spot!=-1):
+        if(spot==0):        #if turns too far out of range
+            print(spot)
+            x=-x            #change direction
+            turnBy(x)         #Searches for blob until right next to it
         elif(spot<=100):     #if blob is in left section of pic
             turnBy(x)        #turns towards it
             forward(1,0.5)
@@ -129,6 +127,9 @@ def findBlob(color):
             print(spot)
             x=-x            #change direction
             turnBy(x)
+    forward(1,0.5)
+    wait(1)
+    backward(1,3)
         
     
 findBlob(8)
