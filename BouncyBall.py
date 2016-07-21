@@ -1,7 +1,7 @@
 from Processing import *
 from random import *
 
-size(600,600)
+size(600,600)       #create window
 
 clr1 = color(randrange(255),randrange(255),randrange(255))
 clr2 = color(randrange(255),randrange(255),randrange(255))
@@ -41,6 +41,8 @@ def justBounce():
                 rect(50,50,width()-100,height()-100) 
             else:
                 background(192,192,192,100)
+                fill(240)
+                rect(50,50,width()-100,height()-100)
             fill(clr1)           
             ellipse(x,y,50,50)
             fill(clr2)
@@ -52,10 +54,10 @@ def justBounce():
             if(y>height()-edge or y < edge):
                 changeY = -changeY
                 clr1 = color(randrange(250),randrange(255),randrange(255))
-            if(x2>width()-edge or x2 < edge ):#or x2+25==x or x2-25==x):
+            if(x2>width()-edge or x2 < edge or x2+25==x or x2-25==x):
                 changeX2 = -changeX2
                 clr2 = color(randrange(250),randrange(255),randrange(255))
-            if(y2>height()-edge or y2 < edge ):#or y2+25==y or y2-25==y):
+            if(y2>height()-edge or y2 < edge or y2+25==y or y2-25==y):
                 changeY2 = -changeY2
                 clr2 = color(randrange(250),randrange(250),randrange(250))
            
