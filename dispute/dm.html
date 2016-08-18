@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Direct Debate</title>
+    <link rel="stylesheet" type="text/css" href="dm.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="dm.js" type="text/javascript"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+</head>
+
+<body>
+
+ <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">Recent Debates</a>
+                </li>
+                <li>
+                    <a id = "jkar" href="#">Topics</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="float:right;"> 
+                        <span class = "glyphicon glyphicon-inbox"></span>  All Direct Debates</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+<div id = "sender">
+	<p> TO:</p>
+	<input style = "width:30%;" id = "receiver"> 
+	<div id = "messages"></div>
+	<textarea style = "width:30%;" id = "write" placeholder = "message"></textarea>
+	<button id = "send" onclick = "send()" type = "button"><span class = "glyphicon glyphicon-arrow-right"></span></button>
+</div>
+
+<script>
+    	$("#menu-toggle").click(function(e) {
+        	e.preventDefault();
+        	$("#wrapper").toggleClass("toggled");
+    	});
+    	</script>
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyDURk83EwyGduZV4Bn5r-wP3c6V9kkF9jc",
+        authDomain: "debatetest-8b3e2.firebaseapp.com",
+        databaseURL: "https://debatetest-8b3e2.firebaseio.com",
+        storageBucket: "",
+        };
+
+    	firebase.initializeApp(config);
+    </script>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="dm.js" type="text/javascript"></script>
+</body>
+</html>
