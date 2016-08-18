@@ -99,7 +99,7 @@ function moveSnake(){
  if(eaten){
     for (var i = 1; i < snake.length; i++) {
     	if(i==1){
-    		
+    		snake.get(0).position.x
     	}
     	snake.get(i).position.x = snake.get(i-1).previousPosition.x;
     	snake.get(i).position.y = snake.get(i-1).previousPosition.y;

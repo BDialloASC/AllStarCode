@@ -2,6 +2,12 @@ body{
 	background: url("http://wallpapercave.com/wp/3bRltp6.jpg");
 }
 
+h1{
+	font-size:300%;
+	color:white;
+}
+
+
 #button{
 	width: 400px;
 	height: 300px;
@@ -21,3 +27,13 @@ body{
 	height: 190px;
 	color: "white";
 }
+
+.word{
+	text-align:center;
+}
+
+img{
+	align-self: center;
+}
+
+
